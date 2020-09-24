@@ -1,10 +1,29 @@
 #include "Matrix.h"
 #include <assert.h>
 
-Matrix::Matrix(int a, int b)
+
+bool Matrix::Simmetric()
 {
-    n = a;
-    m = b;
+    if(n!=m)
+    {
+        std::cout << "Matrix isn't simmetric \n";
+        return false;
+    }
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<m;j++)
+        {
+            if(matrix[i][j]!=matrix[j][i])
+            {
+                std::cout << "Matrix isn't simmetric \n";
+                return false;
+            }
+        }
+    }
+    return true;
+}
+Matrix::Matrix(int a, int b) : n(a), m(b)
+{
     matrix = new int *[a];
     for (int i = 0; i < a; i++)
     {
@@ -18,11 +37,15 @@ const Matrix operator+(const Matrix &other, const Matrix &another)
     Matrix k(other.n, other.m);
     for (int i = 0; i < other.n; i++)
     {
+        std::cout<<">I is equal" << i << std::endl;
         for (int j = 0; j < other.m; j++)
         {
+            std::cout<<">I is equal" << i << j<< std::endl;
             k.matrix[i][j] = other.matrix[i][j] + another.matrix[i][j];
+            std::cout << "matrixsss" << k.matrix[i][j] << std::endl;
         }
     }
+    std::cout << k;
     return k;
 }
 

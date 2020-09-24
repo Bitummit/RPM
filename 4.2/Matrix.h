@@ -8,6 +8,14 @@ private:
     int n,m;// n quantity of rows; m quantity of columns
 public: 
     Matrix(int, int);
+    ~Matrix()
+    {
+        for(int i = 0;i < n;i++)
+        {
+            delete[] matrix[i];
+        }
+        delete matrix;
+    }
     // Matrix(const Matrix &Matrix);
 
 
@@ -24,6 +32,7 @@ public:
 
     friend std::istream& operator>> (std::istream &in, Matrix&);
 
+    bool Simmetric ();
 };
 
 
