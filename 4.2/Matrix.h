@@ -8,7 +8,7 @@ private:
     int n,m;// n quantity of rows; m quantity of columns
 public: 
     Matrix(int, int);
-    Matrix(const Matrix &Matrix);
+    // Matrix(const Matrix &Matrix);
 
 
 
@@ -16,15 +16,13 @@ public:
 
     friend const Matrix operator*(const Matrix& other, const Matrix& another);
 
-    friend const Matrix operator*=(const Matrix& other, int a);
+    friend Matrix operator*=(Matrix& other, int a);
 
     friend const Matrix operator-(const Matrix& other, const Matrix& another);
 
     friend std::ostream& operator<< (std::ostream &out, const Matrix&);
 
     friend std::istream& operator>> (std::istream &in, Matrix&);
-
-    friend bool operator==(const Matrix& other, const Matrix& another);
 
 };
 

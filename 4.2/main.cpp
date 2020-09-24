@@ -3,7 +3,7 @@
 
 int main()
 {
-    int n, m, n2,m2;
+    int n, m, n2,m2,a;
     std::cin >> n >> m;
     Matrix ma(n,m);
     std::cin >> ma;
@@ -15,8 +15,13 @@ int main()
     // Matrix ma3(n,m);
     // ma3 = ma+ma2;
     // std::cout << ma3;
-    Matrix ma4(n,m);
-    ma4 = ma*ma2;
-    std::cout << ma4;
+    // Matrix ma4(n,m);
+    // ma4 = ma*ma2;
+    // std::cout << ma4;
+    std::cin >> a;
+    ma*= a;
+    std::cout << ma;
+    ma2*= a;
+    std::cout << ma2;
     return 0;
 }
