@@ -24,7 +24,7 @@ public:
 
     friend const Matrix operator*(const Matrix& other, const Matrix& another);
 
-    friend Matrix operator*=(Matrix& other, int a);
+    friend const Matrix& operator*=(const Matrix& other, int a);
 
     friend const Matrix operator-(const Matrix& other, const Matrix& another);
 
