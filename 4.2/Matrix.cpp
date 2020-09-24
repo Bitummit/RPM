@@ -42,7 +42,6 @@ const Matrix operator+(const Matrix &other, const Matrix &another)
             k.matrix[i][j] = other.matrix[i][j] + another.matrix[i][j];
         }
     }
-    std::cout << k;
     return k;
 }
 
@@ -80,6 +79,19 @@ const Matrix operator*(const Matrix &other, const Matrix &another)
 }
 
 const Matrix& operator*=(const Matrix &other, int a)
+{
+    // Matrix k(other.n, other.m);
+    for (int i = 0; i < other.n; i++)
+    {
+        for (int j = 0; j < other.m; j++)
+        {
+            other.matrix[i][j] =  other.matrix[i][j] * a;
+        }
+    }
+    return other;
+}
+
+const Matrix& operator*(const Matrix &other, int a)
 {
     // Matrix k(other.n, other.m);
     for (int i = 0; i < other.n; i++)

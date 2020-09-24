@@ -32,6 +32,8 @@ public:
 
     friend std::istream& operator>> (std::istream &in, Matrix&);
 
+    friend const Matrix& operator* (const Matrix &other, int a);
+
     bool Simmetric ();
 };
 
