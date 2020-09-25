@@ -13,8 +13,11 @@ bool Triangle::checkexist(Coord point1, Coord point2, Coord point3)
     return((lenside(point1, point2)+lenside(point2, point3)>=lenside(point1, point3))&&(lenside(point2, point3)+lenside(point3, point1)>=lenside(point1,point2))&&(lenside(point1, point3)+lenside(point1, point2)>=lenside(point2, point3))&&CoordOnStraight());
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 1aa6f57ab1ac0e26088710872cd2af715201cce0
 std::istream& operator>>(std::istream &in, Triangle &Trin)
 {
     while(true)
@@ -44,6 +47,10 @@ bool Triangle::CoordOnStraight()
 {
     if((coord[0].x-coord[1].x)*(coord[2].y-coord[1].y)==(coord[2].x-coord[1].x)*(coord[0].y-coord[1].y))
     {
+<<<<<<< HEAD
+=======
+        std::cout << "sssssss";
+>>>>>>> 1aa6f57ab1ac0e26088710872cd2af715201cce0
         return false;
     }
     return true;
@@ -68,11 +75,19 @@ std::ostream& operator<< (std::ostream &out, const Triangle &Trout)
 
 void Triangle::perimeter() const
 {
+<<<<<<< HEAD
     std::cout << "perimeter is equal "<< (lenside(coord[0], coord[1]) + lenside(coord[1], coord[2]) + lenside(coord[0], coord[2]));
+=======
+    std::cout << "perimeter is equal "<< (lenside(coord[0], coord[1]) + lenside(coord[1], coord[2]) + lenside(coord[0], coord[2])) << std::endl;
+>>>>>>> 1aa6f57ab1ac0e26088710872cd2af715201cce0
 }
 
 void Triangle::area() const
 {
     float p = (lenside(coord[0], coord[1]) + lenside(coord[1], coord[2]) + lenside(coord[0], coord[2]))/2;
+<<<<<<< HEAD
     std::cout << "Area is equal " << (sqrt(p*(p-lenside(coord[0], coord[1]))*(p-lenside(coord[1], coord[2]))*(p-lenside(coord[0], coord[2]))))<< std::endl << std::endl;
+=======
+    std::cout << "Area is equal " << (sqrt(p*(p-lenside(coord[0], coord[1]))*(p-lenside(coord[1], coord[2]))*(p-lenside(coord[0], coord[2]))));
+>>>>>>> 1aa6f57ab1ac0e26088710872cd2af715201cce0
 }
