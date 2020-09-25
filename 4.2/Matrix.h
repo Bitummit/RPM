@@ -24,13 +24,15 @@ public:
 
     friend const Matrix operator*(const Matrix& other, const Matrix& another);
 
-    friend Matrix operator*=(Matrix& other, int a);
+    friend const Matrix& operator*=(const Matrix& other, int a);
 
     friend const Matrix operator-(const Matrix& other, const Matrix& another);
 
     friend std::ostream& operator<< (std::ostream &out, const Matrix&);
 
     friend std::istream& operator>> (std::istream &in, Matrix&);
+
+    friend const Matrix& operator* (const Matrix &other, int a);
 
     bool Simmetric ();
 };
