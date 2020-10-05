@@ -13,7 +13,7 @@ int main()
     Tree tree;
     tree.Insert(Node);
 
-    Tree tree1 = Tree(tree);;
+    Tree tree1;
     while(n!=0){
         cout << "1-output, 2-add element,3-find element, 4-comparison, 0-exit\n";
         cin >> n;
@@ -29,7 +29,6 @@ int main()
             case 2:
                 cin >> Node;
                 tree.Insert(Node);
-                tree1 = Tree(tree);
                 break;
             case 3:
                 cout << "Enter number " << endl;
@@ -37,6 +36,7 @@ int main()
                 tree.poisk1(d);
                 break;
             case 4:
+                tree1 = Tree(tree);
                 if(tree==tree1){
                     std::cout << "Trees are equal \n";
                 }

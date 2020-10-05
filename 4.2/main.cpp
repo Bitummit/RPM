@@ -13,6 +13,8 @@ int main()
     std::cin >> n2 >> m2;
     Matrix ma2(n2,m2);
     std::cin >> ma2;
+    std::cout << ma2;
+    std::cout << "\n";
     Matrix ma_plus=ma+ma2;
     Matrix ma_mult = ma*ma2;
     ma_plus *= 2;
